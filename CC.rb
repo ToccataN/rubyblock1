@@ -1,5 +1,7 @@
 puts "Phrase: " 
 text = gets.chomp.downcase()
+puts "Number: "
+n = gets.chomp.to_i
 
 alpha = ('a'..'z').to_a
 letters= text.split('').to_a
@@ -10,7 +12,7 @@ letters.each do |i|
 	if number[i] == nil
 		string.push(" ")
 	else
-    number2= number[i] -5
+    number2= number[i] -n
     newletter=alpha[number2]
     string.push(newletter.to_s)
 end
